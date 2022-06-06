@@ -50,8 +50,8 @@
 \end{figure}
 \\Имеем состояния равновесия:  
 \begin{equation}
+	\label{systemB}
 	\begin{cases}
-	
 	\sum\limits {{F_z = 0}} \\
 	\sum\limits {{M_z = 0}}
 	\end{cases}
@@ -61,17 +61,17 @@
 		M + Q dz + q dz \frac {dz}{z} - M -dM = 0
 	\end{cases}
 \end{equation}
-Из системы получаем:
-\begin{equation}
-	\label{QM}
- \frac {dQ}{z} = q, 
- \frac {dM}{dz} = Q,
-\end{equation}
-отбрасываем
-$q dz \frac {dz}{z}$
+Выражение $q dz \frac {dz}{z}$ можно отбросить,
 как величину высшего порядка малости.
 
-Отсюда следует, что если балка нагружен только сосредоточенными силами, то $q = 0$, $Q = const$, $M$~---~линейная функция от $z$? если $q = const$, то функция $Q$ будет линейной.
+Из системы~(\ref{systemB}) следует, что если балка нагружен только сосредоточенными силами, то $q = 0$, $Q = const$, $M$~---~линейная функция от $z$, если $q = const$, то функция $Q$ будет линейной.
+
+Итого из системы~(\ref{systemB}) получаем:
+\begin{equation}
+	\label{QM}
+ \frac {dQ}{dz} = q, 
+ \frac {dM}{dz} = Q,
+\end{equation}
 
 Далее рассмотрим наиболее простой случай изгиба~---~чистый изгиб. Под таким видом изгиба понимаются случаи, при которых в поперечных сечениях стержня возникают только изгибающие моменты, а $Q = 0$. Для участок балки, где это условия выполнятся $M = const$~\eqref{QM}. Рассмотрим только этот участок. На нем стержень изогнется по действием моментов $M$. Тогда при условии, что сечение балки однородное, в любом сечении будет одинаковй момент, а значит изменение кривизны стержня будет одинаковым. Следовательно, при чистом изгибе ось однородной балки принимает форму дуги окружности.
 
@@ -187,6 +187,16 @@ $q dz \frac {dz}{z}$
 	\label{diffbalk}
 	y'' = \frac{M}{E J_{x}}.
 \end{equation}
+
+Таким образом, мы получили дифференциальное уравнение стержня~(\ref{diffbalk}). 
+Сопоставим выражения~(\ref{QM}) и~(\ref{diffbalk}), получаем четыре выражения, которые объясняют физический смысл производных 1--4 порядков соответственно:
+\begin{equation}
+	\label{diffbb4}
+	\theta = y',~M = E J_{x} y'',~Q = E J_{x} y''',~
+	q_{y} = E J_{x} y^{IV}.
+\end{equation}
+$y' = \theta$ --- угол поворота сечения, $y''$, $y'''$, $y^{IV}$ прямо пропорционально зависят от момента $M$, точечной силы $Q$, распределенной нагрузки $q$ соответственно. В свою очередь, $y$ --- отклонение точек осевой линии стержня от ее положения в недеформированном состоянии.
+
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.35\textwidth]{pic.6}%
@@ -194,40 +204,28 @@ $q dz \frac {dz}{z}$
 	\vspace*{-2mm}
 	\label{pic6}
 \end{figure}
-Таким образом, мы получили дифференциальное уравнение стержня ~(\ref{diffbalk}). 
-
+\newpage
 Целью данной работы является изучение двух методов его решения: начальных коэффициентов и с помощью обобщенных функций. Будут рассмотрены два вида задач: балка в консольной заделке и двух опорный стержень. После решения этих задач будут сделаны выводы о эффективности и удобности рассмотренных методов.
 
 \section{Теоретическая часть}
 
 \subsection{Метод начальных коэффициентов}
 Обратимся к источнику~\cite{Feofociev}.
-Сопоставим выражения~(\ref{QM}) и~(\ref{diffbalk}), получаем четыре дифференциальных уравнения:
-\begin{equation}
-	\label{diffb4a}
-	\theta = y',~M = E J_{x} y'',~Q = (E J_{x} y'')',~
-	q_{y} = (E J_{x} y'')''.
-\end{equation}
-Для стержня с постоянным сечением:
-\begin{equation}
-	\label{diffb4}
-	\theta = y',~M = E J_{x} y'',~Q = E J_{x} y''',~
-	q_{y} = E J_{x} y^{IV}.
-\end{equation}
-Их можно представить в виде системы дифференциальных уравнений первого порядка:
+Выражения~(\ref{diffbb4}) можно представить в виде системы дифференциальных уравнений первого порядка:
 \begin{equation}
 	\label{diffb4}
 	\begin{cases}
 		\frac{d Q}{d z} - q_{y}(z) = 0\\
 		\frac {d M}{d z} - Q = 0\\
 		\frac{d \theta}{d z} - \frac{M}{E J_{x}(z)} = 0\\
-		\frac{d U_{y}}{d z} - \theta = 0, 
+		\frac{d y}{d z} - \theta = 0, 
 	\end{cases}
 \end{equation}
-где $U_{y}$ --- отклонение точек осевой линии стержня от ее положения в недеформированном состоянии. При изгибе прямолинейных стержней $U_{y} = y$, однако в случае криволинейного $U_{y} \neq y$. Угол поворота сечения $\theta = \frac{d U_{y}}{d z}$.
+
+В результате решения системы~(\ref{diffb4}) получаем отклонение точек осевой линии стержня от ее положения в недеформированном состоянии $y$, что и будет являться ответом.
 
 \subsection{Метод обобщенных коэффициентов}
-Обратимся к источнику ~\cite{Korneev}.
+Обратимся к источнику~\cite{Korneev}.
 В 1926 г. английский физик Дирак ввёл в квантовой механике символ $\delta (z)$, названный им дельта функцией.
 
 Дельта функцию~(рис. \ref{dirac}) можно определить как 
@@ -239,14 +237,6 @@ $q dz \frac {dz}{z}$
 			0, z \geqslant a	
 		\end{cases}
 \end{equation}
-
-Если взять $\varphi (z) = 1$, получим соотношение, 
-\begin{equation}
-	\label{heavi}
-	\int_{-\infty}^z \delta (z - a) dz = 
-	H(z)
-\end{equation}
-
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.35\textwidth]{dirac}%
@@ -255,7 +245,6 @@ $q dz \frac {dz}{z}$
 	\label{dirac}
 \end{figure}
 
-которое связывает функцию Дирака и функцию Хевисайда~(рис. \ref{heavi}).
 Функция Хевисайда определяется как
 \begin{equation}
 	\label{heavicase}
@@ -283,22 +272,49 @@ $q dz \frac {dz}{z}$
 	\label{heavi}
 \end{figure}
 
-При решении задач сопротивления материалов достаточно распола-
-гать двумя табличными интегралами, содержащими обобщенные функции
+Если взять $\varphi (z) = 1$, получим соотношение, 
+\begin{equation}
+	\label{heavi}
+	\int_{-\infty}^z \delta (z - a) dz = 
+	H(z)
+\end{equation}
+которое связывает функцию Дирака и функцию Хевисайда~(рис. \ref{heavi}).
+
+При решении задач сопротивления материалов достаточно располагать двумя табличными интегралами, содержащими обобщенные функции
 Дирака и Хевисайда:
 \begin{equation}
 	\label{dirakint}
 	\int_0^z f(z) \delta(z - a) d z = f(a)H(z - a),
 \end{equation}
-\begin{equation}s
+\begin{equation}
 	\label{heaviint}
 	\int_0^z f(z) H(z - a) d z = H(z - a)\int_a^z f(z) d z.
 \end{equation}
-
+\newpage
+При интегрировании функции Хевисайда будем получать луч:
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.45\textwidth]{intHeav}%
+	\caption{Интеграл функции Хевисайда~(\ref{heavi})}
+	\vspace*{-2mm}
+	\label{intHeav}
+\end{figure}
+\newline
+При повторном интегрировании функции Хевисайда будем получать полупараболу:
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.45\textwidth]{int2Heav}%
+	\caption{Повторный интеграл функции Хевисайда~(\ref{heavi})}
+	\vspace*{-2mm}
+	\label{int2Heav}
+\end{figure}
+\newline
+Последний график~(рис. \ref{int2Heav}) по форме сильно напоминает изгиб упругого стержня, что и будет использовано для решения задач для нахождения уравнения изгиба балки.
 
 \section{Практическая часть}
 \subsection{Балка в заделке}
-Балка в заделке~(рис. \ref{pic7}). Составить уравнение упругой линии в заделке, нагруженной на конце сосредоточенной силой $P$. $E_{Al} = 70 \mbox{ ГПа}, J_{x} = \frac{l h^3}{12}, h = 0.01 \mbox{ м}, l = 1 \mbox{ м}$.
+Балка в заделке~(рис. \ref{pic7}). Составить уравнение упругой линии в заделке, нагруженной на конце сосредоточенной силой $P = 1$ Н. 
+$E_{Al} = 70$~ГПа, $ J_{x} = \frac{l h^3}{12}$~$\mbox{кг}*\mbox{м}^2$, $h = 0.01$~м, $l = 1$~м.
 
 \begin{figure}[!h]
 	\centering
@@ -308,16 +324,34 @@ $q dz \frac {dz}{z}$
 	\label{pic7}
 \end{figure}
 
-\begin{center}Решение\end{center} 
-
 \subsubsection{Метод начальных коэффициентов}
-$q_{y} =  0$, так как нет распределенных сил. $\frac{d M}{d z} = P \Rightarrow M = \int\limits_z^l P d z = P(l - z)$. Далее $\theta = \frac{P}{E J_{x}} \int\limits_z^l (l - z)d z = \frac{P}{E J_{x}} (\frac{z^2}{2} - l z + c_1)$. Получаем уравнение изгиба балки: $y = \frac{P}{E J_{x}} \int\limits_z^l (\frac{z^2}{2} - l z + c_1) d z = \frac{P}{E J_{x}} (\frac{z^3}{6} - \frac{z^2 l}{2} + c_1 z + c_2)$. Найдем $c_1$ и $c_2$. Для этого рассмотрим граничные условия: $z = 0, y = 0 \mbox{ и } \theta = 0 \Rightarrow c_1 = 0, c_2 = 0$. Получим итоговое уравнение: 
+Рассмотрим граничное условие:
+\begin{equation}
+	\label{graneq11}
+	y = 0;\mbox{ } \theta = 0\mbox{, при } z = 0.
+\end{equation}
+
+Распределенная сила $q_{y}$ равна  0, так как она не приложена. Найдем момент $M$:
+\begin{equation}
+	\label{z111}
+	\frac{d M}{d z} = P \Rightarrow M = \int\limits_z^l P d z = P(l - z).
+\end{equation} 
+Далее ищем угол наклона сечения $\theta$:
+ \begin{equation}
+ 	\label{z112}
+ 	\theta = \frac{P}{E J_{x}} \int\limits_z^l (l - z)d z = \frac{P}{E J_{x}} (\frac{z^2}{2} - l z + c_1).
+ \end{equation} 
+Получаем уравнение изгиба балки: 
+ \begin{equation}
+	\label{z112}
+	y = \frac{P}{E J_{x}} \int\limits_z^l (\frac{z^2}{2} - l z + c_1) d z = \frac{P}{E J_{x}} (\frac{z^3}{6} - \frac{z^2 l}{2} + c_1 z + c_2).
+\end{equation}
+Найдем $c_1$ и $c_2$. Для этого рассмотрим граничные условия~(\ref{graneq11}), из них следует, что $c_1 = 0$, поскольку $y(0) = 0$, а $c_2 = 0$, так как $\theta(0) = 0$. Получим итоговое уравнение: 
 \begin{equation}
 	\label{z1diff}
 	y = \frac{P}{E J_{x}} (\frac{z^3}{6} - \frac{z^2 l}{2}).
 \end{equation}
-Максимальны прогиб будет равен $y_{max} = \frac{P l z^2}{E J_{x} 2}$ при $z = l$.
-Уравнение изгиба балки будет иметь следующий график:
+Максимальны прогиб будет равен $y_{max} = \frac{P l z^2}{E J_{x} 2}$ при $z = l$. Уравнение изгиба балки будет иметь следующий график:
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{g.1}%
@@ -327,10 +361,44 @@ $q_{y} =  0$, так как нет распределенных сил. $\frac{d
 \end{figure}
 
 \subsubsection{Метод обобщенных коэффициентов}
-
-Рассмотрим уравнения~(\ref{diffb4}) и функцию Дирихле~(\ref{diraca}). 
-$E J_{x} y^{IV} = P \delta (z)$. Интегрируем, получаем $E J_{x} y''' = P H (z)$ согласно~(\ref{dirakint}). $P \int_l^z  H (z) dz = P H (z) (z - l)$ согласно~(\ref{heaviint}). Найдем угол поворота балки в плоскости сечения $E J_{x} y' = P \int_l^z P H (z) (z - l) dz = P H(z)(\frac{z^2}{2} - l z) + c_1$. Получаем уравнение гибкого изгиба балки $y = \frac{P}{E J_{x}} (\frac{z^3}{6} - \frac{z^2 l}{2}) H(z) + c_1 z + c_2$. Поскольку $c_1 = 0, c_2 = 0 \mbox{, при } z = 0$, а $H(z) = 1 \mbox{, при } z \leqslant l$. Тогда итоговое уравнение изгиба балки имеет вид
+Рассмотрим граничное условие:
 \begin{equation}
+	\label{graneq11}
+	y = 0;\mbox{ } \theta = 0\mbox{, при } z = 0.
+\end{equation}
+
+Рассмотрим уравнения~(\ref{diffb4}) и функцию Дирихле~(\ref{diraca}). Запишем с помощью выражений~(\ref{diffb4}) и~(\ref{diraca}) начальное уравнение:
+\begin{equation}
+	\label{z123112}
+	E J_{x} y^{IV} = P \delta (z).
+\end{equation} 
+Интегрируем, согласно~(\ref{dirakint}) получаем: 
+\begin{equation}
+	\label{z12312312}
+	E J_{x} y''' = P H (z).
+\end{equation}
+Интегрируем~(\ref{heaviint}), согласно~(\ref{dirakint}) получаем:
+\begin{equation}
+	\label{z312312}
+	P \int_l^z  H (z) dz = P H (z) (z - l).
+\end{equation}
+Найдем угол поворота балки в плоскости сечения:
+\begin{equation}
+	\label{z31231}
+	E J_{x} y' = P \int_l^z P H (z) (z - l) dz = P H(z)(\frac{z^2}{2} - l z) + c_1.
+\end{equation}
+Получаем уравнение гибкого изгиба балки:
+\begin{equation}
+	\label{z3123}
+	y = \frac{P}{E J_{x}} (\frac{z^3}{6} - \frac{z^2 l}{2}) H(z) + c_1 z + c_2.
+\end{equation}
+Из граничных условий получаем:
+\begin{equation}
+	\label{z312233}
+	c_1 = 0, c_2 = 0.
+\end{equation}
+Учитывая, что $H(z) = 1 \mbox{, при } z \leqslant l$, получаем итоговое уравнение изгиба балки
+ \begin{equation}
 	\label{z1ob}
 	y = \frac{P}{E J_{x}} (\frac{z^3}{6} - \frac{z^2  l}{2})
 \end{equation}
@@ -341,7 +409,7 @@ $E J_{x} y^{IV} = P \delta (z)$. Интегрируем, получаем $E J_{
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.5\textwidth]{pic.8}%
+	\includegraphics[width=0.42\textwidth]{pic.8}%
 	\caption{Двух опорный стержень}
 	\vspace*{-2mm}
 	\label{pic8}
@@ -351,28 +419,63 @@ $E J_{x} y^{IV} = P \delta (z)$. Интегрируем, получаем $E J_{
 
 \subsubsection{Метод начальных коэффициентов}
 
-$q_{y} =  0$, так как нет распределенных сил. Разобьем стержень на 2 части: до точки приложения $P$ и после. $Q_1 = \frac{P b}{l} $. Найдем момент $M_1 = \frac{b}{l} \int\limits_0^z P d z = P z + C_0^1$, $c_0^1 = 0$, так как момент равен нулю (не консоль).
-Найдем угол поворота $\theta_1 = \frac{b}{l} \frac{P}{E J_{x}} \int\limits_0^z P z d z = \frac{b}{l} \frac{P}{E J_{x}} (\frac{b}{l} \frac{z^2}{2} + c_1^1)$. 
-$y_1 = \frac{b}{l} \frac{P}{E J_{x}} \int\limits_0^z (\frac{z^2}{2} + \theta_1) dz =  \frac{b}{l} \frac{P}{E J_{x}} (\frac{z^3}{6} + c_1^1 z + c_2^1)$, $c_2^1 = 0$, так как концах стержень неподвижен по оси $y$. 
-
-$Q_2 = \frac{P a}{l}$. 
-Найдем момент $M_2 = \frac{a}{l} \int\limits_l^z P d z = -P(z + l)$. 
-Найдем угол поворота $\theta_2 = - \frac{a}{l} \frac{P}{E J_{x}} \int\limits_l^z P(z + l) d z = - \frac{a}{l} \frac{P}{E J_{x}} (\frac{z^2}{2} + z l - c_1^2)$. 
-$y_2 =  - \frac{a}{l} \frac{P}{E J_{x}} \int\limits_l^z (\frac{z^2}{2} + z l - c_1^2) dz = - \frac{a}{l}  \frac{P}{E J_{x}} (\frac{z^3}{6} + \frac{z^2 l}{2} - c_1^2 z + c_2^2)$. 
-
+Рассмотрим граничные условия:
 \begin{equation}
 	\label{diffbsec}
 	\begin{cases}
-		z = 0 \mbox{, при } y_1 = 0\\
-		z = l \mbox{, при } y_2 = 0\\
-		z = a \mbox{, при } y_1 = y_2
+		y_1 = 0 \mbox{, при } z = 0\\
+		y_2 = 0 \mbox{, при } z = l\\
+		y_1 = y_2 \mbox{, при } z = a
 	\end{cases}
 \end{equation}
+Распределенная сила $q_{y}$ равна  0, так как она не приложена. Разобьем стержень на 2 части: до точки приложения $P$ и после. Сила $Q_1 = \frac{P b}{l} $. 
+Найдем момент $M_1$:
+\begin{equation}
+	\label{z221}
+	\begin{cases}
+		M_1 = \frac{b}{l} \int\limits_0^z P d z = P z + c_0^1 
+	\end{cases}
+\end{equation}
+Параметр $c_0^1 = 0$, так как момент равен нулю (не консоль).
+Найдем угол поворота $\theta_1$:
+\begin{equation}
+	\label{z222}
+	\begin{cases}
+	\theta_1 = \frac{b}{l} \frac{P}{E J_{x}} \int\limits_0^z P z d z = \frac{b}{l} \frac{P}{E J_{x}} (\frac{b}{l} \frac{z^2}{2} + c_1^1)
+	\end{cases}
+\end{equation}
+Получаем первое уравнение изгиба балки $y_1$: 
+\begin{equation}
+	\label{z112}
+	y_1 = \frac{b}{l} \frac{P}{E J_{x}} \int\limits_0^z (\frac{z^2}{2} + \theta_1) dz =  \frac{b}{l} \frac{P}{E J_{x}} (\frac{z^3}{6} + c_1^1 z + c_2^1),
+\end{equation}
+Параметр $c_2^1 = 0$, так как концах стержень неподвижен по оси $y$. 
 
-$z = 0 \Rightarrow y_1 = 0 \Rightarrow c_2^1 = 0$.
-
-$z = l \Rightarrow y_1 = 0 \Rightarrow c_2^2 = a^3 \frac{1}{6}$.
-
+Рассмотрим вторую часть стержня. Сила $Q_2 = \frac{P a}{l}$. 
+Найдем момент $M_2$:
+\begin{equation}
+	\label{z2211}
+	\begin{cases}
+		M_2 = \frac{a}{l} \int\limits_l^z P d z = -P(z + l)
+	\end{cases}
+\end{equation}
+Найдем угол поворота $\theta_2$:
+\begin{equation}
+	\label{z2222}
+		\theta_2 = - \frac{a}{l} \frac{P}{E J_{x}} \int\limits_l^z P(z + l) d z = - \frac{a}{l} \frac{P}{E J_{x}} (\frac{z^2}{2} + z l - c_1^2). 
+\end{equation}
+Получаем второе уравнение изгиба балки $y_2$: 
+\begin{equation}
+	\label{z11332}
+	y_2 =  - \frac{a}{l} \frac{P}{E J_{x}} \int\limits_l^z (\frac{z^2}{2} + z l - c_1^2) dz = - \frac{a}{l}  \frac{P}{E J_{x}} (\frac{z^3}{6} + \frac{z^2 l}{2} - c_1^2 z + c_2^2),
+\end{equation}
+Из граничных условий~(\ref{diffbsec}) получаем:
+\begin{equation}
+	\label{z113321213}
+	c_2^1 = 0,
+	c_2^2 = a^3 \frac{1}{6}.
+\end{equation}
+А так же из граничных условий~(\ref{diffbsec}) получается:
 \begin{equation}
 	\label{diffbsec2}
 	\begin{cases}
@@ -385,15 +488,21 @@ $z = l \Rightarrow y_1 = 0 \Rightarrow c_2^2 = a^3 \frac{1}{6}$.
 	b(\frac{b}{l} \frac{z^2}{2} + c_1^1) = a(\frac{z^2}{2} + z l - c_1^2)
 \end{cases}
 \end{equation}
-
-Решаем систему ~(\ref{diffbsec2}). Получаем $c_1^1 = \frac{a}{6 l} (3 a l - 2 l^2 - a^2)$, $c_1^2 = -\frac{a}{6 l} (2 l^2 + a^2)$.
-
+Решаем систему ~(\ref{diffbsec2}). Получаем:
+\begin{equation}
+	\label{z113312213}
+	\begin{cases}
+		c_1^1 = \frac{a}{6 l} (3 a l - 2 l^2 - a^2)\\
+		c_1^2 = -\frac{a}{6 l} (2 l^2 + a^2)
+	\end{cases}
+\end{equation}
 Подставляем в уравнение $y_1$ и $y_2$, получаем:
 \begin{equation}
 	\label{z2diff}
+	y(z) = 
 	\begin{cases}
-		y_1 = \frac{P}{6 E J_{x}} \frac{b}{l} (z^3 - \frac{2}{3} z l(2 l - \frac{2}{3}l))\\
-		y_2 = \frac{P}{6 E J_{x}} \frac{a}{l} (-z^3 + 3 z^2 l - z(2 l^2 + \frac{4}{9} l^2) + \frac{4}{9}l^4)
+		y_1 = \frac{P}{6 E J_{x}} \frac{b}{l} (z^3 - \frac{2}{3} z l(2 l - \frac{2}{3}l))\mbox{, при } 0 \leqslant z \leqslant a\\
+		y_2 = \frac{P}{6 E J_{x}} \frac{a}{l} (-z^3 + 3 z^2 l - z(2 l^2 + \frac{4}{9} l^2) + \frac{4}{9}l^4)\mbox{, при } a \leqslant z \leqslant b
 	\end{cases}
 \end{equation}
 Пусть $a = \frac{2 l}{3}, b = \frac{l}{3}$, тогда уравнение изгиба балки будет иметь следующий график:
@@ -405,15 +514,49 @@ $z = l \Rightarrow y_1 = 0 \Rightarrow c_2^2 = a^3 \frac{1}{6}$.
 	\label{g2}
 \end{figure}
 
-\subsubsection{Метод обобщенных коэффициентов}
+\subsubsection{Решение методом обобщенных функций}
+Рассмотрим граничные условия:
+\begin{equation}
+	\label{diffbse12c}
+	\begin{cases}
+		y = 0, M = 0 \mbox{, при } z = 0\\
+		y = 0, M = 0 \mbox{, при } z = l.
+	\end{cases}
+\end{equation}
+
 Обратимся к источнику~\cite{Birger}.
 Рассмотрим уравнения~(\ref{diffb4}) и функцию Дирихле~(\ref{diraca}). 
-$E J_{x} y^{IV} = P \delta (z - \frac {l}{a}) - \frac{P}{a} \delta (z)$. Интегрируем, получаем $E J_{x} y''' = P H (z - \frac {l}{a}) - \frac{P}{a}$ согласно~(\ref{dirakint}).
-Найдем угол поворота балки в плоскости сечения $E J_{x} y' = P \int_l^z P H (z - \frac {l}{a}) - \frac{P}{a} dz = P H(z - \frac{l}{a})\frac{(z - \frac{l}{a})^2}{2} - \frac{P}{2} \frac{z^2}{2} + c_1$.
-Получаем уравнение гибкого изгиба балки $y = \frac{P}{E J_{x}}( H(x - \frac{l}{2})\frac{(x - \frac{l}{a})^3}{6} - \frac{P}{2} \frac{z^3}{6} ) + c_1 z + c_2$.
-При $y = l, c_2 = 0$.
-
-$E J_{x} y^{IV} = P \delta (z)$. Интегрируем, получаем $E J_{x} y''' = P H (z)$ согласно~(\ref{dirakint}). $P \int_l^z  H (z) dz = P H (z) (z - l)$ согласно~(\ref{heaviint}). Найдем угол поворота балки в плоскости сечения $E J_{x} y' = P \int_l^z P H (z) (z - l) dz = P H(z)(\frac{z^2}{2} - l z) + c_1$. Получаем уравнение гибкого изгиба балки $y = \frac{P}{E J_{x}} (\frac{z^3}{6} - \frac{z^2 l}{2}) H(z) + c_1 z + c_2$. Поскольку $c_1 = 0, c_2 = 0 \mbox{, при } z = 0$, а $H(z) = 1 \mbox{, при } z \leqslant l$. Тогда $c_1 = \frac{P l(3 a^2 z^2 - 3 a l z + l^2)}{6 a^3 E J_{x}}$ и  итоговое уравнение изгиба балки имеет вид
+\begin{equation}
+	\label{z1233213}
+	E J_{x} y^{IV} = P \delta (z).
+\end{equation}
+Интегрируем~(\ref{z1233213}), согласно~(\ref{dirakint}) получаем:
+\begin{equation}
+	\label{z12213}
+	E J_{x} y''' = P H (z).
+\end{equation}
+Найдем момент $M$ согласно~(\ref{heaviint}):
+\begin{equation}
+	\label{z121334}
+	M = P \int_l^z  H (z) dz = P H (z) (z - l).
+\end{equation}
+Найдем угол поворота балки в плоскости сечения:
+\begin{equation}
+	\label{z1213}
+	E J_{x} y' = P \int_l^z P H (z) (z - l) dz = P H(z)(\frac{z^2}{2} - l z) + c_1.
+\end{equation}
+Получаем уравнение гибкого изгиба балки:
+\begin{equation}
+	\label{z123213}
+	y = \frac{P}{E J_{x}} (\frac{z^3}{6} - \frac{z^2 l}{2}) H(z) + c_1 z + c_2.
+\end{equation}
+Из граничных условий~(\ref{diffbse12c}) $c_2 = 0$. Так же найдем $c_1$ из условия $y(l) = 0$~(\ref{diffbse12c}), обозначающий угол поворота сечения
+\begin{equation}
+	\label{z12321233}
+	c_1 = \frac{P l(3 a^2 z^2 - 3 a l z + l^2)}{6 a^3 E J_{x}}
+\end{equation}
+Кроме того, $H(z) = 1 \mbox{, при } z \leqslant l$. 
+Тогда и  итоговое уравнение изгиба балки имеет вид:
 \begin{equation}
 	\label{z2ob}
 	y = \frac{P}{E J_{x}} (-\frac{z^3}{6} \frac{1}{a} + \frac{(z - \frac{l}{a})^3}{6} H(z - \frac{l}{a}) + \frac{l(3 a^2 z^2 - 3 a l z + l^2)}{6 a^3})
@@ -429,19 +572,14 @@ $E J_{x} y^{IV} = P \delta (z)$. Интегрируем, получаем $E J_{
 \end{figure}
 
 Таким образом, график метода обобщенных функций~(\ref{z2ob}) совпал с графиком способа начальных коэффициентов ~(\ref{z2diff}).
-
-
-\subsection{Программная реализация расчета уравнения упругого изгиба}
-
-Описанные задачи были так же решены с помощью системы Wolfram Mathematica. С помощью этой системы были получены методы для вычисления уравнения прогиба балки для задач вышеописанных типов с произвольной точкой приложения силы, а так же их графическое представление.
+\newpage
 \section-{Заключение}
 В ходе выполнения курсовой были изучены методы начальных коэффициентов и обобщенных функций нахождения уравнения упругого изгиба стержня. Были решены 2 типа задач с помощью этих методов, их результат оказался идентичным. Метод начальных коэффициентов является более трудоемким и менее удобным по сравнению с методом обобщенных функций, поскольку требует учета большего количества граничных условий, больший объем вычислений.
-Все описанные подходы реализованы в Wolfram Mathematica с демонстрацией результатов работы.
+\newpage
 \begin{thebibliography}{3}
 \bibitem{Feofociev} В.И. Феодосьев Сопротивление материалов: учеб. для вузов. --- 10-е изд., перераб. и доп. --- М.: Изд-во МГТУ им. Н.Э.Баумана, 1999. --- 590 с.	
 	
-\bibitem{Korneev} Техническая теория стержней. Примене‐
-ние обобщённых функций для решения
+\bibitem{Korneev} Техническая теория стержней. Применение обобщённых функций для решения
 задач сопротивления материалов
 [Электронный ресурс] : учеб. пособие /
 С. А. Корнеев. – Омск : Изд‐во ОмГТУ,

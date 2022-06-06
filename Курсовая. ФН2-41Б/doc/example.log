@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.30)  3 JUN 2022 07:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.30)  7 JUN 2022 02:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -699,13 +699,19 @@ LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 2
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )<<t2a.cmap>>
 
-LaTeX Warning: Label `diffb4' multiply defined.
-
-
 LaTeX Warning: Label `heavicase' multiply defined.
 
 
 LaTeX Warning: Label `heavi' multiply defined.
+
+
+LaTeX Warning: Label `z112' multiply defined.
+
+
+LaTeX Warning: Label `graneq11' multiply defined.
+
+
+LaTeX Warning: Label `z112' multiply defined.
 
 )
 \openout1 = `example.aux'.
@@ -822,13 +828,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\hss' on input line 41.
 
-<./figures//pic.1.png, id=66, 203.46785pt x 158.43808pt>
+<./figures//pic.1.png, id=64, 203.46785pt x 158.43808pt>
 File: ./figures//pic.1.png Graphic file (type png)
 <use ./figures//pic.1.png>
 Package pdftex.def Info: ./figures//pic.1.png  used on input line 46.
 (pdftex.def)             Requested size: 159.3382pt x 124.08163pt.
 [3 <./figures//pic.1.png>]
-<./figures//pic.2.png, id=85, 181.23093pt x 182.8987pt>
+<./figures//pic.2.png, id=84, 181.23093pt x 182.8987pt>
 File: ./figures//pic.2.png Graphic file (type png)
 <use ./figures//pic.2.png>
 Package pdftex.def Info: ./figures//pic.2.png  used on input line 81.
@@ -854,120 +860,120 @@ Package pdftex.def Info: ./figures//pic.5.png  used on input line 123.
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\hss' on input line 173.
 
-<./figures//pic.6.png, id=129, 209.583pt x 140.09262pt>
+<./figures//pic.6.png, id=132, 209.583pt x 140.09262pt>
 File: ./figures//pic.6.png Graphic file (type png)
 <use ./figures//pic.6.png>
-Package pdftex.def Info: ./figures//pic.6.png  used on input line 192.
+Package pdftex.def Info: ./figures//pic.6.png  used on input line 202.
 (pdftex.def)             Requested size: 159.3382pt x 106.50783pt.
-[7 <./figures//pic.6.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 201.
+(hyperref)                removing `\hss' on input line 210.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 203.
+(hyperref)                removing `\hss' on input line 212.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 229.
+(hyperref)                removing `\hss' on input line 227.
 
-<./figures//dirac.png, id=150, 265.17531pt x 224.59293pt>
+<./figures//dirac.png, id=152, 265.17531pt x 224.59293pt>
 File: ./figures//dirac.png Graphic file (type png)
 <use ./figures//dirac.png>
-Package pdftex.def Info: ./figures//dirac.png  used on input line 252.
+Package pdftex.def Info: ./figures//dirac.png  used on input line 242.
 (pdftex.def)             Requested size: 159.3382pt x 134.95212pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8]
-<./figures//heavi.png, id=166, 1093.08376pt x 273.02pt>
+[8 <./figures//pic.6.png>]
+<./figures//heavi.png, id=165, 1093.08376pt x 273.02pt>
 File: ./figures//heavi.png Graphic file (type png)
 <use ./figures//heavi.png>
-Package pdftex.def Info: ./figures//heavi.png  used on input line 280.
+Package pdftex.def Info: ./figures//heavi.png  used on input line 269.
 (pdftex.def)             Requested size: 341.43306pt x 85.28104pt.
+ [9 <./figures//dirac.png> <./figures//heavi.png>]
+<./figures//intHeav.png, id=180, 325.215pt x 201.80008pt>
+File: ./figures//intHeav.png Graphic file (type png)
+<use ./figures//intHeav.png>
+Package pdftex.def Info: ./figures//intHeav.png  used on input line 297.
+(pdftex.def)             Requested size: 204.85844pt x 127.11931pt.
+<./figures//int2Heav.png, id=182, 325.215pt x 198.46454pt>
+File: ./figures//int2Heav.png Graphic file (type png)
+<use ./figures//int2Heav.png>
+Package pdftex.def Info: ./figures//int2Heav.png  used on input line 306.
+(pdftex.def)             Requested size: 204.85844pt x 125.01817pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 299.
+(hyperref)                removing `\hss' on input line 314.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 300.
+(hyperref)                removing `\hss' on input line 315.
 
-[9 <./figures//dirac.png> <./figures//heavi.png>]
-<./figures//pic.7.png, id=180, 314.17375pt x 139.52126pt>
+<./figures//pic.7.png, id=186, 314.17375pt x 139.52126pt>
 File: ./figures//pic.7.png Graphic file (type png)
 <use ./figures//pic.7.png>
-Package pdftex.def Info: ./figures//pic.7.png  used on input line 305.
+Package pdftex.def Info: ./figures//pic.7.png  used on input line 321.
 (pdftex.def)             Requested size: 227.62204pt x 101.08325pt.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 313.
+(hyperref)                removing `\hss' on input line 327.
 
-<./figures//g.1.png, id=181, 325.215pt x 190.12569pt>
+[10 <./figures//intHeav.png (PNG copy)> <./figures//int2Heav.png (PNG copy)>]
+<./figures//g.1.png, id=196, 325.215pt x 190.12569pt>
 File: ./figures//g.1.png Graphic file (type png)
 <use ./figures//g.1.png>
-Package pdftex.def Info: ./figures//g.1.png  used on input line 323.
+Package pdftex.def Info: ./figures//g.1.png  used on input line 357.
 (pdftex.def)             Requested size: 227.62204pt x 133.07545pt.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 329.
-
-[10 <./figures//pic.7.png> <./figures//g.1.png (PNG copy)>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 339.
+(hyperref)                removing `\hss' on input line 363.
 
-<./figures//pic.8.png, id=198, 329.23pt x 165.61874pt>
+[11 <./figures//pic.7.png> <./figures//g.1.png (PNG copy)>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hss' on input line 407.
+
+<./figures//pic.8.png, id=219, 329.23pt x 165.61874pt>
 File: ./figures//pic.8.png Graphic file (type png)
 <use ./figures//pic.8.png>
-Package pdftex.def Info: ./figures//pic.8.png  used on input line 344.
-(pdftex.def)             Requested size: 227.62204pt x 114.50702pt.
+Package pdftex.def Info: ./figures//pic.8.png  used on input line 412.
+(pdftex.def)             Requested size: 191.20168pt x 96.18529pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 352.
+(hyperref)                removing `\hss' on input line 420.
 
-[11 <./figures//pic.8.png>]
-<./figures//g.2.png, id=207, 325.215pt x 183.45462pt>
+[12] [13 <./figures//pic.8.png>]
+<./figures//g.2.png, id=248, 325.215pt x 185.67831pt>
 File: ./figures//g.2.png Graphic file (type png)
 <use ./figures//g.2.png>
-Package pdftex.def Info: ./figures//g.2.png  used on input line 402.
-(pdftex.def)             Requested size: 227.62204pt x 128.40614pt.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 408.
-
-
-Overfull \hbox (22.50917pt too wide) in paragraph at lines 416--417
-[]$\OML/cmm/m/it/12 EJ[]y[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 P^^N\OT1/cmr/m/n
-/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 )$\T2A/cmr/m/n/12 . »н-те-гри-ру-ем, по-
-лу-ча-ем $\OML/cmm/m/it/12 EJ[]y[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 PH\OT1/cm
-r/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 )$ \T2A/cmr/m/n/12 со-глас-но ([][]
-22[][]). $\OML/cmm/m/it/12 P [][] H\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/
-m/n/12 )\OML/cmm/m/it/12 dz \OT1/cmr/m/n/12 =
- []
-
-[12 <./figures//g.2.png (PNG copy)>]
-<./figures//g.4.png, id=224, 325.215pt x 185.67831pt>
-File: ./figures//g.4.png Graphic file (type png)
-<use ./figures//g.4.png>
-Package pdftex.def Info: ./figures//g.4.png  used on input line 425.
+Package pdftex.def Info: ./figures//g.2.png  used on input line 511.
 (pdftex.def)             Requested size: 227.62204pt x 129.96259pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hss' on input line 434.
+(hyperref)                removing `\hss' on input line 517.
 
-
-Overfull \hbox (0.93205pt too wide) in paragraph at lines 436--437
-[]\T2A/cmr/m/n/12 ќписанные за-да-чи бы-ли так же ре-ше-ны с по-мо-щью си-сте-м
-ы Wolfram Mathematica.
- []
-
-[13 <./figures//g.4.png (PNG copy)>] [14] (example.aux)
+[14 <./figures//g.2.png (PNG copy)>]
+<./figures//g.4.png, id=270, 325.215pt x 185.67831pt>
+File: ./figures//g.4.png Graphic file (type png)
+<use ./figures//g.4.png>
+Package pdftex.def Info: ./figures//g.4.png  used on input line 568.
+(pdftex.def)             Requested size: 227.62204pt x 129.96259pt.
+ [15 <./figures//g.4.png (PNG copy)>]
+[16] [17] (example.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.72pt have occurred.
@@ -977,13 +983,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14308 strings out of 478614
- 227907 string characters out of 2843122
- 535826 words of memory out of 3000000
- 32103 multiletter control sequences out of 15000+600000
+ 14384 strings out of 478614
+ 229008 string characters out of 2843122
+ 527657 words of memory out of 3000000
+ 32150 multiletter control sequences out of 15000+600000
  488427 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,9n,91p,1096b,364s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 87i,9n,91p,1073b,361s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\pinev\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati12
 00.pk> <C:\Users\pinev\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
 bx1200.pk> <C:\Users\pinev\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
@@ -1005,9 +1011,9 @@ ts/cm/cmr8.pfb><C:/Users/pinev/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb><C:/Users/pinev/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb><C:/Users/pinev/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on example.pdf (14 pages, 711965 bytes).
+Output written on example.pdf (17 pages, 742542 bytes).
 PDF statistics:
- 695 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 741 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
+ 233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
